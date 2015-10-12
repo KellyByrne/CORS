@@ -9,6 +9,15 @@ router.get('/', function(req, res, next) {
  });
 });
 
+router.get('/api', function(req, res, next) {
+ dogs.find({}, function(err, dogs) {
+ 	if(err) {
+			res.send(err);
+		}
+		res.status(201).json(dogs);
+	});
+});
+
 router.get('/new', function(req, res, next) {
 	res.render('dogs/new')
 });
