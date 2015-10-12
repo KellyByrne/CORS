@@ -1,6 +1,6 @@
 var express = require('express');
 var router = express.Router();
-var db = require('monk')('localhost/dogs');
+var db = require('monk')(process.env.MONGOLAB_URI || 'localhost/dogs');
 var dogs = db.get('dogs');
 /* GET users listing. */
 router.get('/', function(req, res, next) {
