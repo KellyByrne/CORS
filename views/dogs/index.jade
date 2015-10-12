@@ -1,0 +1,19 @@
+extends ../layout
+
+block content
+  h1 Dogs!
+  a(href="/dogs/new") New Dog
+
+   table
+    thead
+      tr
+        th Name
+        th Owner
+    tbody
+      for dogs in allDogs
+        tr
+          td 
+            a(href='/dogs/' + dogs._id) #{dogs.name}
+          td
+            a(href='/dogs/' + dogs._id) #{dogs.owner}
+          

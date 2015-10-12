@@ -1,0 +1,12 @@
+extends ../layout
+
+block content
+  h1 New Dog
+  form(action='/dogs', method='post')
+    label(for= 'name') Name
+      input(type='text' name= "name")
+    br
+    label(for='owner') Owner
+      input(type='text' name= "owner")
+    br
+    input(type="submit")

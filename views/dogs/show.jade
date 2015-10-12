@@ -1,0 +1,9 @@
+extends ../layout
+
+block content
+  h1 Dogs!
+  p Dog: #{name}
+  p Owner: #{owner}
+
+  a(href='/dogs/' + id +'/edit' ) Edit
+  input(type='submit' value='Delete') 
